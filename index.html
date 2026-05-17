@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --bg: #f5f2eb;
       --bg2: #ede9e0;
@@ -21,9 +21,9 @@
       --serif: 'Playfair Display', Georgia, serif;
       --mono: 'DM Mono', 'Courier New', monospace;
     }
- 
+
     html { scroll-behavior: smooth; }
- 
+
     body {
       background: var(--bg);
       color: var(--ink);
@@ -31,7 +31,7 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
- 
+
     /* Grain overlay */
     body::before {
       content: '';
@@ -42,7 +42,7 @@
       z-index: 1000;
       opacity: 0.5;
     }
- 
+
     /* ── HEADER ── */
     header {
       padding: 72px 0 48px;
@@ -50,7 +50,7 @@
       position: relative;
       overflow: hidden;
     }
- 
+
     header::after {
       content: 'READ';
       position: absolute;
@@ -66,9 +66,9 @@
       pointer-events: none;
       user-select: none;
     }
- 
+
     .container { max-width: 780px; margin: 0 auto; padding: 0 40px; }
- 
+
     .eyebrow {
       font-family: var(--mono);
       font-size: 10px;
@@ -78,7 +78,7 @@
       margin-bottom: 16px;
       display: block;
     }
- 
+
     h1 {
       font-size: clamp(42px, 6vw, 72px);
       font-weight: 400;
@@ -86,12 +86,12 @@
       letter-spacing: -0.02em;
       color: var(--ink);
     }
- 
+
     h1 em {
       font-style: italic;
       color: var(--gold);
     }
- 
+
     .subtitle {
       margin-top: 20px;
       font-family: var(--mono);
@@ -99,7 +99,7 @@
       color: var(--ink3);
       letter-spacing: 0.05em;
     }
- 
+
     /* ── FILTERS ── */
     .filters {
       padding: 24px 0;
@@ -109,7 +109,7 @@
       flex-wrap: wrap;
       align-items: center;
     }
- 
+
     .filter-label {
       font-family: var(--mono);
       font-size: 9px;
@@ -118,7 +118,7 @@
       color: var(--ink3);
       margin-right: 6px;
     }
- 
+
     .tag-btn {
       font-family: var(--mono);
       font-size: 10px;
@@ -132,13 +132,13 @@
       border-radius: 1px;
       transition: all 0.15s ease;
     }
- 
+
     .tag-btn:hover { border-color: var(--gold); color: var(--gold); }
     .tag-btn.active { background: var(--gold-light); border-color: var(--gold); color: var(--gold); }
- 
+
     /* ── ARTICLE LIST ── */
     .articles { padding: 0; }
- 
+
     .article {
       border-bottom: 1px solid var(--rule);
       padding: 44px 0;
@@ -149,19 +149,19 @@
       transform: translateY(16px);
       animation: fadeUp 0.4s ease forwards;
     }
- 
+
     .article.hidden { display: none; }
- 
+
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
     }
- 
+
     .article:nth-child(1) { animation-delay: 0.05s; }
     .article:nth-child(2) { animation-delay: 0.1s; }
     .article:nth-child(3) { animation-delay: 0.15s; }
     .article:nth-child(4) { animation-delay: 0.2s; }
     .article:nth-child(5) { animation-delay: 0.25s; }
- 
+
     .article-num {
       font-family: var(--mono);
       font-size: 11px;
@@ -169,9 +169,9 @@
       padding-top: 6px;
       text-align: right;
     }
- 
+
     .article-body {}
- 
+
     .article-meta {
       font-family: var(--mono);
       font-size: 9px;
@@ -183,12 +183,12 @@
       gap: 12px;
       flex-wrap: wrap;
     }
- 
+
     .article-meta span + span::before {
       content: '·';
       margin-right: 12px;
     }
- 
+
     .article-title {
       font-size: clamp(20px, 2.8vw, 26px);
       font-weight: 400;
@@ -200,16 +200,16 @@
       margin-bottom: 14px;
       transition: color 0.15s ease;
     }
- 
+
     .article-title:hover { color: var(--gold); }
- 
+
     .article-tags {
       display: flex;
       gap: 6px;
       flex-wrap: wrap;
       margin-bottom: 16px;
     }
- 
+
     .article-tag {
       font-family: var(--mono);
       font-size: 9px;
@@ -220,7 +220,7 @@
       color: var(--ink3);
       border-radius: 1px;
     }
- 
+
     .insights-btn {
       font-family: var(--mono);
       font-size: 10px;
@@ -236,17 +236,17 @@
       gap: 6px;
       transition: color 0.15s;
     }
- 
+
     .insights-btn:hover { color: var(--gold); }
- 
+
     .insights-btn .arrow {
       display: inline-block;
       transition: transform 0.2s ease;
       font-size: 8px;
     }
- 
+
     .insights-btn.open .arrow { transform: rotate(90deg); }
- 
+
     .insights-panel {
       margin-top: 20px;
       padding: 20px 24px;
@@ -258,16 +258,16 @@
       font-style: italic;
       display: none;
     }
- 
+
     .insights-panel.open { display: block; }
- 
+
     /* ── FOOTER ── */
     footer {
       padding: 48px 0;
       border-top: 1px solid var(--rule);
       margin-top: 40px;
     }
- 
+
     .footer-inner {
       display: flex;
       align-items: center;
@@ -275,7 +275,7 @@
       flex-wrap: wrap;
       gap: 12px;
     }
- 
+
     .footer-text {
       font-family: var(--mono);
       font-size: 10px;
@@ -283,7 +283,7 @@
       color: var(--ink3);
       text-transform: uppercase;
     }
- 
+
     .footer-count {
       font-family: var(--mono);
       font-size: 10px;
@@ -291,7 +291,7 @@
       color: var(--gold);
       text-transform: uppercase;
     }
- 
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .container { padding: 0 24px; }
@@ -302,7 +302,7 @@
   </style>
 </head>
 <body>
- 
+
   <header>
     <div class="container">
       <span class="eyebrow">Neel's Curated Intelligence</span>
@@ -310,17 +310,17 @@
       <p class="subtitle">Articles worth your attention — summaries included</p>
     </div>
   </header>
- 
+
   <div class="container">
- 
+
     <div class="filters" id="filters">
       <span class="filter-label">Filter</span>
     </div>
- 
+
     <div class="articles" id="articles"></div>
- 
+
   </div>
- 
+
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -329,7 +329,7 @@
       </div>
     </div>
   </footer>
- 
+
   <script>
     const articles = [
       {
@@ -373,11 +373,11 @@
         summary: "An economics-first analysis of the AI super cycle, prompted by Yann LeCun's observation that AI's impact on labor and markets is 'an economics problem, not a technology problem.' The central argument: the AI value chain has its own distinct economics that break inherited mental models from the cloud era. The 'inverted stack' framing suggests value accrues upward toward infrastructure (chips, compute) rather than down to applications, which face commoditization pressure — inverting the prior cycle where software captured most value."
       }
     ];
- 
+
     // Build tag set
     const allTags = ["all", ...new Set(articles.flatMap(a => a.tags))];
     let activeFilter = "all";
- 
+
     // Render filters
     const filtersEl = document.getElementById("filters");
     allTags.forEach(tag => {
@@ -392,7 +392,7 @@
       });
       filtersEl.appendChild(btn);
     });
- 
+
     // Render articles
     const articlesEl = document.getElementById("articles");
     articles.forEach((article, i) => {
@@ -419,10 +419,10 @@
       `;
       articlesEl.appendChild(el);
     });
- 
+
     // Footer count
     document.getElementById("footer-count").textContent = `${articles.length} articles`;
- 
+
     function toggleInsights(btn) {
       const panel = btn.nextElementSibling;
       const isOpen = panel.classList.contains("open");
@@ -433,7 +433,7 @@
         : `<span class="arrow" style="transform:rotate(90deg)">▶</span> Hide insights`;
       panel.classList.toggle("open", !isOpen);
     }
- 
+
     function filterArticles() {
       document.querySelectorAll(".article").forEach(el => {
         const tags = el.dataset.tags.split(",");
@@ -441,6 +441,6 @@
       });
     }
   </script>
- 
+
 </body>
 </html>
